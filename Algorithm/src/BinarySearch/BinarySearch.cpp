@@ -32,5 +32,10 @@ int binarySearch(const int* array, const int len, const int desired)
         }
     }
 
+    if (desiredIndex == -1)
+    {
+        throw BinarySearchErrors::NOT_FOUND;
+    }
+
     return desiredIndex;
 }
