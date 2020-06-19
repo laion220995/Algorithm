@@ -10,7 +10,7 @@ namespace BinarySearch
 	TEST_CLASS(BinarySearchTest)
 	{
 	public:
-
+		// binarySearch return expected number
 		TEST_METHOD(ReturnCorrectIndex)
 		{
 			int arr[] = { 1, 2, 34, 64 };
@@ -25,7 +25,8 @@ namespace BinarySearch
 			Assert::ExpectException<BinarySearchErrors>(func);
 		}
 		
-		TEST_METHOD(ReturnExceptionIfNotFoundNumbers)
+		// Return exception if number don't exists in array
+		TEST_METHOD(ReturnExceptionIfNotFoundNumber)
 		{
 			int arr[] = { 1, 2, 34, 64 };
 			auto func = [&arr] { binarySearch(arr, 4, 10); };
